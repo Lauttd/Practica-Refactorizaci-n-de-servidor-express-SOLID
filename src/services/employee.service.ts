@@ -27,4 +27,14 @@ export class EmployeeService {
         
         return resultado;
     }
+
+    async obtenerTodos() {
+        const obtener = await this.repository.buscarTodosEmpleados();
+            return obtener
+    }
+
+    async obtenerPorId( id: string) {
+        const obtenerId = await this.repository.buscarEmpeladoId( id )
+            return obtenerId
+    }
 }

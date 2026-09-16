@@ -6,7 +6,7 @@ export class EmployeeRepository {
         return employee 
    } 
 
-   async buscarTodosEmpleados( datosEmpleados: any ) {
+   async buscarTodosEmpleados() {
      const employees = await Employee.find().sort({ createdAt: -1 });
         return employees
    }
